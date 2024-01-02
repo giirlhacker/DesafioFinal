@@ -1,0 +1,30 @@
+class Heroi{
+    constructor(nome, idade, tipo) {
+        this.nome = nome;
+        this.idade = idade;
+        this.tipo = tipo;
+    }
+
+    atacar() {
+        let ataque;
+        if ("mago" === this.tipo) {
+          ataque = "usou magia";
+        } else if ("guerreiro" === this.tipo) {
+          ataque = "usou espada";
+        } else if ("monge" === this.tipo) {
+          ataque = "usou artes marciais";
+        } else if ("ninja" === this.tipo) {
+          ataque = "usou shuriken";
+        } else {
+          ataque = "atacou";
+        }
+        console.log(`O ${this.tipo} que atacou ${ataque}`);
+
+    }
+}
+
+let heroi1 = new Heroi('Aragorn', 50, 'guerreiro');
+let heroi2 = new Heroi('Gandalf', 300, 'mago');
+
+heroi1.atacar(); // Saída: "O guerreiro atacou usando usou espada"
+heroi2.atacar(); // Saída: "O mago atacou usando usou magia"
